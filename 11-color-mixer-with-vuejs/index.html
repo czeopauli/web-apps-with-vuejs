@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mixer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="app">
+    <header>
+        <div>
+            <label for="red">r</label>
+            <input type="range" id="red" v-model="red" step="1" min="0" max="255" value="150">
+        </div>
+        <div>
+            <label for="green">g</label>
+            <input type="range" id="green" v-model="green" step="1" min="0" max="255" value="33">
+        </div>
+        <div>
+            <label for="blue">b</label>
+            <input type="range" id="blue" v-model="blue" step="1" min="0" max="255" value="180">
+        </div>
+        <p id="hex-color"> {{ hexvalue }}</p>
+        <button id="randomBtn" v-on:click="fetchRandomColor">Random Color</button>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
